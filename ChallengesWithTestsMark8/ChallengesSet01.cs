@@ -31,12 +31,16 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            return 
+            if (nameOfPerson != "")
+            {
+                return "Hello, " + nameOfPerson + "!";
+            }
+            return "Hello!";
         }
 
         public string GetHey()
         {
-            throw new NotImplementedException();
+            return "HEY!";
         }
     }
 }
