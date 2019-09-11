@@ -6,7 +6,7 @@ namespace ChallengesWithTestsMark8
     {
         public bool AreTwoNumbersTheSame(int num1, int num2)
         {
-            return (num1 == num2) ? true : false;
+            return num1 == num2;
         }
 
         public double Subtract(double minuend, double subtrahend)
