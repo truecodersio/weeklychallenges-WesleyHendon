@@ -12,98 +12,103 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
         {
-            for (int i = 0; i < businesses.Length; i++)
+            foreach (Business business in businesses)
             {
-                if (businesses[i].TotalRevenue == 0)
+                if (business.TotalRevenue <= 0)
                 {
-                    businesses[i].Name = "CLOSED";
+                    business.Name = "CLOSED";
                 }
             }
         }
 
         public bool IsAscendingOrder(int[] numbers)
         {
-            if (numbers == null)
-                return false;
-
+            if (numbers == null || numbers.Length == 0) return false;
+            int previousNumber = numbers[0];
             for (int i = 1; i < numbers.Length; i++)
             {
-                if (numbers[i] < numbers[i - 1])
+                if (numbers[i] < previousNumber)
                 {
                     return false;
                 }
+                previousNumber = numbers[i];
             }
-
             return true;
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
+            if (numbers == null) return 0;
             int sum = 0;
-
-            for (int i = 1; i < numbers.Length; i++)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                if (numbers[i - 1] % 2 == 0)
+                if (numbers[i] % 2 == 0)
                 {
-                    sum += numbers[i];
+                    try { sum += numbers[i + 1]; }
+                    catch (System.IndexOutOfRangeException)
+                    {
+                        // no number to add to sum
+                    }
                 }
             }
-
             return sum;
         }
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            if (words == null || words.Length == 0)
+            if (words == null || words.Length == 0 || words.Length == 1)
             {
                 return "";
             }
-
             string sentence = "";
-
-            foreach (string word in words)
+            int counter = 0;
+            foreach (string str in words)
             {
-                if (word.Trim().Length > 0)
+                if (str == " " || str == "")
                 {
-                    sentence += word.Trim() + " ";
+                    counter++;
+                    continue;
                 }
-            }
 
-            if (sentence.Length == 0)
-            {
-                return "";
-            }
+                string toAdd = str.Replace(" ", "");
+                sentence += toAdd;
 
-            sentence = sentence.Substring(0, sentence.Length - 1);
-            sentence += ".";
+                if (counter < words.Length - 1 && toAdd != "") sentence += " ";
+                else if (counter == words.Length - 1) sentence += ".";
+
+                counter++;
+            }
             return sentence;
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
+            if (elements == null) return new double[0];
             List<double> everyFourth = new List<double>();
-
-            for (int i = 3; i < elements.Count; i += 4)
+            for (int i = 1; i <= elements.Count; i++)
             {
-                everyFourth.Add(elements[i]);
+                if (i % 4 == 0)
+                {
+                    everyFourth.Add(elements[i-1]);
+                }
             }
-
             return everyFourth.ToArray();
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
         {
+            if (nums.Length == 0 || nums.Length == 1) return false;
             for (int i = 0; i < nums.Length; i++)
             {
-                for (int k = i + 1; k < nums.Length; k++)
+                for (int j = 0; j < nums.Length; j++)
                 {
-                    if (nums[i] + nums[k] == targetNumber)
+                    if (i == j) continue;
+                    if (nums[i] + nums[j] == targetNumber)
                     {
                         return true;
                     }
                 }
             }
-
             return false;
         }
     }

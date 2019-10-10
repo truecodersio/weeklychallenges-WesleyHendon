@@ -138,7 +138,9 @@ namespace ChallengesWithTestsMark8.Tests
             string actual = challenger.TurnWordsIntoSentence(words);
 
             // Assert
+            Console.WriteLine(actual);
             Assert.Equal(expected, actual);
+            
         }
 
         [Theory]
