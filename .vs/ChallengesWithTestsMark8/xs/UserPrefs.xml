@@ -1,35 +1,21 @@
 ﻿<Properties StartupConfiguration="{5D8F9EC8-A726-4E18-B4B5-C64B4DCDE247}|Default">
   <MonoDevelop.Ide.ItemProperties.ChallengesWithTestsMark8 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ChallengesWithTestsMark8.Tests/ChallengesSet06Tests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ChallengesWithTestsMark8/ChallengesSet05.cs">
     <Files>
-      <File FileName="ChallengesWithTestsMark8/ChallengesSet05.cs" Line="80" Column="14" />
-      <File FileName="ChallengesWithTestsMark8.Tests/ChallengesSet04Tests.cs" Line="201" Column="74" />
-      <File FileName="ChallengesWithTestsMark8/ChallengesSet06.cs" Line="91" Column="33" />
-      <File FileName="ChallengesWithTestsMark8.Tests/ChallengesSet05Tests.cs" Line="128" Column="52" />
-      <File FileName="ChallengesWithTestsMark8.Tests/ChallengesSet06Tests.cs" Line="1" Column="1" />
+      <File FileName="ChallengesWithTestsMark8.Tests/ChallengesSet01Tests.cs" Line="1" Column="1" />
+      <File FileName="ChallengesWithTestsMark8.Tests/ChallengesSet05Tests.cs" Line="13" Column="34" />
+      <File FileName="ChallengesWithTestsMark8/ChallengesSet06.cs" Line="1" Column="1" />
+      <File FileName="ChallengesWithTestsMark8/ChallengesSet05.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
+          <Option id="ShowAllFiles" value="True" />
           <Node name="ChallengesWithTestsMark8" expanded="True">
-            <Node name="ChallengesWithTestsMark8" expanded="True" />
-            <Node name="ChallengesWithTestsMark8.Tests" expanded="True">
-              <Node name="ChallengesSet06Tests.cs" selected="True" />
+            <Node name="ChallengesWithTestsMark8" expanded="True">
+              <Node name="ChallengesSet05.cs" selected="True" />
             </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="ChallengesWithTestsMark8" expanded="True">
-            <Node name="ChallengesWithTestsMark8.Tests" expanded="True">
-              <Node name="ChallengesWithTestsMark8" expanded="True">
-                <Node name="Tests" expanded="True">
-                  <Node name="ChallengesSet05Tests" expanded="True" />
-                  <Node name="ChallengesSet06Tests" expanded="True" selected="True" />
-                </Node>
-              </Node>
-            </Node>
+            <Node name="ChallengesWithTestsMark8.Tests" expanded="True" />
           </Node>
         </State>
       </Pad>
